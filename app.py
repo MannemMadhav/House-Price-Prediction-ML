@@ -47,7 +47,7 @@ def predict():
     return render_template(
         "index.html",
         accuracy=63.24,
-        prediction_text=f"Estimated House Price: ${prediction[0]:,.2f}"
+        prediction_text=f"Estimated House Price: ₹{prediction[0]:,.0f}"
     )
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
