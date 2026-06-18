@@ -38,6 +38,41 @@ type="number"
 name="sqft_living"
 placeholder="Living Area (sq ft)"
 required>
+<input type="number"
+       step="0.5"
+       name="floors"
+       placeholder="Floors"
+       required>
+
+<input type="number"
+       name="waterfront"
+       placeholder="Waterfront (0 or 1)"
+       required>
+
+<input type="number"
+       name="view"
+       placeholder="View Rating (0-4)"
+       required>
+
+<input type="number"
+       name="condition"
+       placeholder="Condition (1-5)"
+       required>
+
+<input type="number"
+       name="grade"
+       placeholder="Grade (1-13)"
+       required>
+
+<input type="number"
+       name="sqft_above"
+       placeholder="Sqft Above Ground"
+       required>
+
+<input type="number"
+       name="sqft_basement"
+       placeholder="Sqft Basement"
+       required>
 
         <button type="submit">
             Predict Price
@@ -71,6 +106,19 @@ required>
     <img src="{{ url_for('static', filename='price_graph.png') }}"
          alt="House Price Graph"
          class="graph-image">
+</div>
+<div class="project-info">
+    <h3>Feature Importance Analysis</h3>
+
+    <img src="{{ url_for('static',
+    filename='feature_importance.png') }}"
+         alt="Feature Importance"
+         class="graph-image">
+
+    <p>
+        This graph shows which house features have the highest
+        impact on price prediction.
+    </p>
 </div>
 <div class="footer">
 Built with Python • Flask • Pandas • Scikit-Learn
