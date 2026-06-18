@@ -20,6 +20,8 @@ Machine Learning Powered House Price Prediction
 
     <form action="/predict" method="post">
 
+<div class="form-grid">
+
         <input
 type="number"
 name="bedrooms"
@@ -73,7 +75,7 @@ required>
        name="sqft_basement"
        placeholder="Sqft Basement"
        required>
-
+</div>s
         <button type="submit">
             Predict Price
         </button>
@@ -119,6 +121,17 @@ required>
         This graph shows which house features have the highest
         impact on price prediction.
     </p>
+</div>
+<div class="project-info">
+    <h3>Project Statistics</h3>
+
+    <ul>
+        <li>Dataset Records: 21,000+</li>
+        <li>Features Used: 10</li>
+        <li>Model Accuracy: {{ accuracy }}%</li>
+        <li>Algorithm: Random Forest Regressor</li>
+        <li>Deployment: Render Cloud</li>
+    </ul>
 </div>
 <div class="footer">
 Built with Python • Flask • Pandas • Scikit-Learn

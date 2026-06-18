@@ -14,15 +14,21 @@ body{
 }
 
 .container{
-    width:450px;
-    padding:40px;
-    border-radius:25px;
+     width: 95%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 20px;
     background:rgba(255,255,255,0.15);
     backdrop-filter:blur(15px);
     box-shadow:0 10px 40px rgba(0,0,0,0.3);
     text-align:center;
 }
-
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
 h1{
     color:white;
     margin-bottom:10px;
