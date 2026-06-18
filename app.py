@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import pandas as pd
 import joblib
+import os
 
 app = Flask(__name__)
 
@@ -32,6 +33,6 @@ def predict():
         "index.html",
        prediction_text=f"Estimated House Price: ${prediction[0]:,.2f}"
     )
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
