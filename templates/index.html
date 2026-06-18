@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Prediction</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🏠 House Price Prediction</h1>
+        <p class="subtitle">
+Machine Learning Powered House Price Prediction
+</p>
+<p>Model Accuracy: {{ accuracy }}%</p>
+
+
+    <form action="/predict" method="post">
+
+        <input
+type="number"
+name="bedrooms"
+placeholder="Bedrooms"
+required>
+
+<input
+type="number"
+step="0.5"
+name="bathrooms"
+placeholder="Bathrooms"
+required>
+
+<input
+type="number"
+name="sqft_living"
+placeholder="Living Area (sq ft)"
+required>
+
+        <button type="submit">
+            Predict Price
+        </button>
+
+    </form>
+
+    {% if prediction_text %}
+        <div class="result">
+            {{ prediction_text }}
+        </div>
+    {% endif %}
+    <div class="project-info">
+    <h3>About Project</h3>
+    <p>
+        This machine learning application predicts house prices based on
+        Bedrooms, Bathrooms and Living Area using the King County Housing Dataset.
+    </p>
+</div>
+<div class="project-info">
+    <h3>Key Features Used</h3>
+    <ul>
+        <li>Bedrooms</li>
+        <li>Bathrooms</li>
+        <li>Living Area (sq ft)</li>
+    </ul>
+</div>
+<div class="project-info">
+    <h3>House Price Analysis</h3>
+
+    <img src="{{ url_for('static', filename='price_graph.png') }}"
+         alt="House Price Graph"
+         class="graph-image">
+</div>
+<div class="footer">
+Built with Python • Flask • Pandas • Scikit-Learn
+</div>
+</div>
+
+</body>
+</html>
