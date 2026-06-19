@@ -54,7 +54,7 @@ pip install -r requirements.txt
 python app.py
 
 Open:
-http://127.0.0.1:5000
+https://house-price-prediction-ml-3-m7p9.onrender.com/
 
 ## Author
 
